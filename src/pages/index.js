@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 // import Img from "gatsby-image";
 
-import { Layout } from '../components/Layout'
+import { Layout } from "../components/Layout";
 // import { Posts } from '../components/Posts'
-// import { SEO } from '../components/SEO'
+import { SEO } from "../components/SEO";
 import { Heading } from "../components/Heading";
 import { Hero } from "../components/Hero";
 import { projectsList } from "../data/projectsList";
@@ -13,9 +13,12 @@ import { projectsList } from "../data/projectsList";
 import config from "../utils/config";
 
 export default function Index() {
-    return (
+  Index.Layout = Layout;
+
+  return (
     <div>
       <Helmet title={config.siteTitle} />
+      <SEO />
 
       <div className="container">
         <div className="hero-wrapper">
@@ -39,44 +42,96 @@ export default function Index() {
         </div>
       </div>
 
-      <section className="segment large">
-        <Heading title="Projects" slug="/projects" />
+      <div className="container">
+        <section className="segment large">
+          <Heading title="Projects" slug="/projects" />
 
-        <div className="post-preview">
-          {projectsList
-            .filter((project) => project.highlight)
-            .map((project) => {
-              return (
-                <div className="anchored card" key={project.slug}>
-                  <div>
-                    <time>{project.date}</time>
-                    <a
-                      className="card-header"
-                      href={`https://github.com/taniarascia/${project.slug}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {project.name}
-                    </a>
-                    <p>{project.tagline}</p>
+          <div className="post-preview">
+            {projectsList
+              .filter((project) => project.highlight)
+              .map((project) => {
+                return (
+                  <div className="anchored card" key={project.slug}>
+                    <div>
+                      <time>{project.date}</time>
+                      <a
+                        className="card-header"
+                        href={`https://github.com/taniarascia/${project.slug}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {project.name}
+                      </a>
+                      <p>{project.tagline}</p>
+                    </div>
+                    <div className="anchored links">
+                      {project.writeup && (
+                        <Link className="button" to={project.writeup}>
+                          Article
+                        </Link>
+                      )}
+                      <a className="button flex" href={project.url}>
+                        Demo
+                      </a>
+                    </div>
                   </div>
-                  <div className="anchored links">
-                    {project.writeup && (
-                      <Link className="button" to={project.writeup}>
-                        Article
-                      </Link>
-                    )}
-                    <a className="button flex" href={project.url}>
-                      Demo
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-        </div>
-      </section>
+                );
+              })}
+          </div>
+        </section>
+      </div>
     </div>
   );
-};
+}
 
-Index.Layout = Layout
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     latest: allMarkdownRemark(
+//       limit: 6
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       filter: { frontmatter: { template: { eq: "post" } } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             title
+//             tags
+//             categories
+//           }
+//         }
+//       }
+//     }
+//     highlights: allMarkdownRemark(
+//       limit: 12
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       filter: { frontmatter: { categories: { eq: "Highlight" } } }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             date(formatString: "MMMM DD, YYYY")
+//             title
+//             shortTitle
+//             tags
+//             thumbnail {
+//               childImageSharp {
+//                 fixed(width: 45, height: 45) {
+//                   ...GatsbyImageSharpFixed
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

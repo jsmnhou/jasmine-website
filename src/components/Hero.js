@@ -1,4 +1,4 @@
-// big letter headers
+// main center on home page ("Hey, I'm Jasmine ...")
 import React from 'react'
 
 export const Hero = ({ highlight, subTitle, title, children, index }) => {
