@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 // import Img from "gatsby-image";
 
-// import { Layout } from '../components/Layout'
+import { Layout } from '../components/Layout'
 // import { Posts } from '../components/Posts'
 // import { SEO } from '../components/SEO'
 import { Heading } from "../components/Heading";
@@ -12,8 +12,8 @@ import { projectsList } from "../data/projectsList";
 // import { getSimplifiedPosts } from '../utils/helpers'
 import config from "../utils/config";
 
-const IndexPage = () => {
-  return (
+export default function Index() {
+    return (
     <div>
       <Helmet title={config.siteTitle} />
 
@@ -28,15 +28,14 @@ const IndexPage = () => {
               Michigan. Check out my <Link to="/projects"> projects</Link>!
             </p>
           </Hero>
-          {/* <div className="decoration">
-            proc
+          <div className="decoration">
             <img
               src="/ram.png"
               alt="RAM Ram"
               className="image hero-image"
               title="RAM Ram"
             />
-          </div> */}
+          </div>
         </div>
       </div>
 
@@ -80,4 +79,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+Index.Layout = Layout

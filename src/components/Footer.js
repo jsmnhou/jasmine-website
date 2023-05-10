@@ -1,6 +1,6 @@
 import React from "react";
 
-import netlify from "../../content/thumbnails/netlify.png";
+// import netlify from "../../content/thumbnails/netlify.png";
 import gatsby from "../assets/gatsby.png";
 import github from "../assets/nav-github.png";
 
@@ -9,8 +9,8 @@ const links = [
 ];
 const madeWithLinks = [
   { url: "https://www.gatsbyjs.org/", label: "Gatsby", icon: gatsby },
-  { url: "https://github.com/jsmnhou", label: "GitHub", icon: github },
-  { url: "https://www.netlify.com", label: "Netlify", icon: netlify },
+  { url: "https://github.com/jsmnhou", label: "GitHub", icon: github},
+  { url: "https://www.netlify.com", label: "Netlify", icon: github},
 ];
 
 export const Footer = () => {

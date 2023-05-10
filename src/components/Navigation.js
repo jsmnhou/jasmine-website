@@ -5,6 +5,9 @@ import React from "react";
 import { Link } from "gatsby";
 
 import floppyLogo from "../assets/floppylogo.png";
+import { ExternalLinkIcon } from '../assets/ExternalLinkIcon'
+import { slugify } from '../utils/helpers'
+
 
 const mainNavItems = [
   { url: "/", label: "Home", mobileOnly: true },
@@ -14,7 +17,7 @@ const mainNavItems = [
 
 const socialNavItems = [{ url: "https://github.com/jsmnhou", label: "GitHub" }];
 
-export const Navigation = () => {
+export const Navigation = ( onUpdateTheme) => {
   return (
     <section className="navigation">
       <div className="conter">
@@ -57,7 +60,12 @@ export const Navigation = () => {
               </div>
             ))}
           </nav>
-          // TODO: implement dark mode
+        </div>
+        // TODO: implement dark mode
+        <div className="theme-toggle">
+          <button onClick={onUpdateTheme}>
+            <img src={floppyLogo} alt="Theme" />
+          </button>
         </div>
       </div>
     </section>
