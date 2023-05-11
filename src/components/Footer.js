@@ -2,15 +2,16 @@ import React from "react";
 
 // import netlify from "../../content/thumbnails/netlify.png";
 import gatsby from "../assets/gatsby.png";
-import github from "../assets/nav-github.png";
+import github from "../assets/github-octo.webp";
+import netlify from "../assets/netlify.png";
 
 const links = [
   { url: "https://www.linkedin.com/in/jasmine-hou1/", label: "Linkedln" },
 ];
 const madeWithLinks = [
   { url: "https://www.gatsbyjs.org/", label: "Gatsby", icon: gatsby },
-  { url: "https://github.com/jsmnhou", label: "GitHub", icon: github},
-  { url: "https://www.netlify.com", label: "Netlify", icon: github},
+  { url: "https://github.com/jsmnhou", label: "GitHub", icon: github },
+  { url: "https://www.netlify.com", label: "Netlify", icon: netlify },
 ];
 
 export const Footer = () => {

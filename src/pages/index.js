@@ -33,10 +33,10 @@ export default function Index() {
             </Hero>
             {/* <div className="decoration">
               <img
-                src="/ram.png"
-                alt="RAM Ram"
+                src="/duckbill.png"
+                alt="Duckbill"
                 className="image hero-image"
-                title="RAM Ram"
+                title="DuckBill"
               />
             </div> */}
           </div>
@@ -56,7 +56,7 @@ export default function Index() {
                         <time>{project.date}</time>
                         <a
                           className="card-header"
-                          href={`https://github.com/taniarascia/${project.slug}`}
+                          href={`https://github.com/jsmnhou/${project.slug}`}
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -71,7 +71,7 @@ export default function Index() {
                           </Link>
                         )}
                         <a className="button flex" href={project.url}>
-                          Demo
+                          View
                         </a>
                       </div>
                     </div>

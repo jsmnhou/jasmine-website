@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Helmet from "react-helmet";
 
-import favicon from "../assets/nav-floppy.png";
+import krool from "../assets/krool-old.png";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 
@@ -28,7 +28,7 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <Helmet>
-        <link rel="shortcut icon" type="image/png" href={favicon} />
+        <link rel="shortcut icon" type="image/png" href={krool} />
         {theme === "dark" && (
           <link rel="stylesheet" type="text/css" href="/dark-mode.css" />
         )}

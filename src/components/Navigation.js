@@ -4,7 +4,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import floppyLogo from "../assets/floppylogo.png";
+import krool from "../assets/krool-old.png";
+import moon from "../assets/moon.png";
+
 import { ExternalLinkIcon } from "../assets/ExternalLinkIcon";
 import { slugify } from "../utils/helpers";
 
@@ -23,7 +25,7 @@ export const Navigation = ({ theme, onUpdateTheme }) => {
         <div className="nav-wrapper">
           {/* icon: Jasmine Hou */}
           <Link to="/" className="item brand">
-            <img src={floppyLogo} className="logo" alt="Jasmine Hou" />
+            <img src={krool} className="logo" alt="Jasmine Hou" />
             <span>Jasmine Hou</span>
           </Link>
           {/* map each mainNavItem to link on nav bar */}
@@ -63,7 +65,7 @@ export const Navigation = ({ theme, onUpdateTheme }) => {
         {/* TODO: implement dark mode */}
         <div className="theme-toggle">
           <button onClick={onUpdateTheme}>
-            <img src={floppyLogo} alt="Theme" />
+            <img src={moon} alt="Theme" />
           </button>
         </div>
       </div>

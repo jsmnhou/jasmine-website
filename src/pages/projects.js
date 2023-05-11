@@ -49,7 +49,7 @@ export default function Projects() {
                       {repos.find((repo) => repo.name === project.slug) && (
                         <div className="star">
                           <a
-                            href={`https://github.com/taniarascia/${project.slug}/stargazers`}
+                            href={`https://github.com/jsmnhou/${project.slug}/stargazers`}
                           >
                             {Number(
                               repos.find((repo) => repo.name === project.slug)
@@ -64,7 +64,7 @@ export default function Projects() {
                       <time>{project.date}</time>
                       <a
                         className="card-header"
-                        href={`https://github.com/taniarascia/${project.slug}`}
+                        href={`https://github.com/jsmnhou/${project.slug}`}
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -85,17 +85,17 @@ export default function Projects() {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Demo <ExternalLinkIcon />
+                          View <ExternalLinkIcon />
                         </a>
                       )}
-                      <a
+                      {/* <a
                         className="button small flex"
                         href={`https://github.com/taniarascia/${project.slug}`}
                         target="_blank"
                         rel="noreferrer"
                       >
                         Source <ExternalLinkIcon />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 );
