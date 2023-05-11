@@ -8,6 +8,7 @@ import { SEO } from "../components/SEO";
 import { Heading } from "../components/Heading";
 import { Hero } from "../components/Hero";
 import { projectsList } from "../data/projectsList";
+import { contributionsList } from "../data/contributionsList";
 import config from "../utils/config";
 
 export default function Index() {
@@ -23,8 +24,13 @@ export default function Index() {
               <p className="hero-description small width">
                 <br />
                 I'm currently a second-year computer science student at the
-                University of Michigan. Check out my{" "}
-                <Link to="/projects"> projects</Link>!
+                University of Michigan. Feel free to check out my{" "}
+                <Link to="/projects"> projects</Link> or simply explore!
+                <br />
+                <br />
+                Thanks for dropping by. 💗
+                {/* Check out my{" "}
+                <Link to="/projects"> projects</Link>! */}
               </p>
             </Hero>
             {/* <div className="decoration">
@@ -38,6 +44,7 @@ export default function Index() {
           </div>
         </div>
 
+        {/* Projects Head */}
         <div className="container">
           <section className="segment large">
             <Heading title="Projects" slug="/projects" />
@@ -61,12 +68,47 @@ export default function Index() {
                         <p>{project.tagline}</p>
                       </div>
                       <div className="anchored links">
-                        {project.writeup && (
+                        {/* {project.writeup && (
                           <Link className="button" to={project.writeup}>
                             Article
                           </Link>
-                        )}
+                        )} */}
                         <a className="button flex" href={project.url}>
+                          View
+                        </a>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </section>
+        </div>
+
+        {/* Open Source Head */}
+        <div className="container">
+          <section className="segment large">
+            <Heading title="Contributions" slug="/projects" />
+
+            <div className="post-preview">
+              {contributionsList
+                .filter((contribution) => contribution.highlight)
+                .map((contribution) => {
+                  return (
+                    <div className="anchored card" key={contribution.slug}>
+                      <div>
+                        <time>{contribution.date}</time>
+                        <a
+                          className="card-header"
+                          href={`https://github.com/jsmnhou/${contribution.slug}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {contribution.name}
+                        </a>
+                        <p>{contribution.tagline}</p>
+                      </div>
+                      <div className="anchored links">
+                        <a className="button flex" href={contribution.url}>
                           View
                         </a>
                       </div>
@@ -80,54 +122,3 @@ export default function Index() {
     </Layout>
   );
 }
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     latest: allMarkdownRemark(
-//       limit: 6
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       filter: { frontmatter: { template: { eq: "post" } } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             tags
-//             categories
-//           }
-//         }
-//       }
-//     }
-//     highlights: allMarkdownRemark(
-//       limit: 12
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       filter: { frontmatter: { categories: { eq: "Highlight" } } }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             shortTitle
-//             tags
-//             thumbnail {
-//               childImageSharp {
-//                 fixed(width: 45, height: 45) {
-//                   ...GatsbyImageSharpFixed
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

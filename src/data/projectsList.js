@@ -1,10 +1,4 @@
 export const projectsList = [
-  // {
-  //   name: 'taniarascia.com',
-  //   date: '2022',
-  //   slug: 'taniarascia.com',
-  //   tagline: 'The source of this website.',
-  // },
   {
     name: "My Personal Website",
     date: "2023",

@@ -17,7 +17,7 @@ export default function Projects() {
   useEffect(() => {
     async function getStars() {
       const repos = await fetch(
-        "https://api.github.com/users/taniarascia/repos?per_page=100"
+        "https://api.github.com/users/jsmnhou/repos?per_page=100"
       );
 
       return repos.json();
