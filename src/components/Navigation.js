@@ -5,9 +5,8 @@ import React from "react";
 import { Link } from "gatsby";
 
 import floppyLogo from "../assets/floppylogo.png";
-import { ExternalLinkIcon } from '../assets/ExternalLinkIcon'
-import { slugify } from '../utils/helpers'
-
+import { ExternalLinkIcon } from "../assets/ExternalLinkIcon";
+import { slugify } from "../utils/helpers";
 
 const mainNavItems = [
   { url: "/", label: "Home", mobileOnly: true },
@@ -17,17 +16,17 @@ const mainNavItems = [
 
 const socialNavItems = [{ url: "https://github.com/jsmnhou", label: "GitHub" }];
 
-export const Navigation = ( onUpdateTheme) => {
+export const Navigation = ({ theme, onUpdateTheme }) => {
   return (
     <section className="navigation">
-      <div className="conter">
+      <div className="container">
         <div className="nav-wrapper">
-          // icon: Jasmine Hou
+          {/* icon: Jasmine Hou */}
           <Link to="/" className="item brand">
             <img src={floppyLogo} className="logo" alt="Jasmine Hou" />
             <span>Jasmine Hou</span>
           </Link>
-          // map each mainNavItem to link on nav bar
+          {/* map each mainNavItem to link on nav bar */}
           <nav>
             {mainNavItems.map((item) => (
               <div className="nav-item-outer" key={item.url}>
@@ -43,7 +42,7 @@ export const Navigation = ( onUpdateTheme) => {
                 </Link>
               </div>
             ))}
-            // map each socialNavItem to link on nav bar
+            {/* map each socialNavItem to link on nav bar */}
             {socialNavItems.map((item) => (
               <div className="nav-item-outer" key={item.url}>
                 <img src={item.icon} alt={item.label} className="nav-image" />
@@ -61,7 +60,7 @@ export const Navigation = ( onUpdateTheme) => {
             ))}
           </nav>
         </div>
-        // TODO: implement dark mode
+        {/* TODO: implement dark mode */}
         <div className="theme-toggle">
           <button onClick={onUpdateTheme}>
             <img src={floppyLogo} alt="Theme" />
