@@ -4,12 +4,10 @@ import Helmet from "react-helmet";
 // import Img from "gatsby-image";
 
 import { Layout } from "../components/Layout";
-// import { Posts } from '../components/Posts'
 import { SEO } from "../components/SEO";
 import { Heading } from "../components/Heading";
 import { Hero } from "../components/Hero";
 import { projectsList } from "../data/projectsList";
-// import { getSimplifiedPosts } from '../utils/helpers'
 import config from "../utils/config";
 
 export default function Index() {
@@ -23,8 +21,6 @@ export default function Index() {
           <div className="hero-wrapper">
             <Hero title="Hey, I'm Jasmine!" index>
               <p className="hero-description small width">
-                Welcome to my digital garden. 🌱
-                <br />
                 <br />
                 I'm currently a second-year computer science student at the
                 University of Michigan. Check out my{" "}

@@ -4,11 +4,9 @@ import Helmet from "react-helmet";
 import { Hero } from "../components/Hero";
 
 import { Layout } from "../components/Layout";
-// import { Posts } from '../components/Posts'
 import { SEO } from "../components/SEO";
-// import { SidebarLayout } from '../components/SidebarLayout'
-// import { getSimplifiedPosts } from '../utils/helpers'
 import config from "../utils/config";
+import { AboutSidebar } from "../components/AboutSidebar";
 
 export default function About() {
   const title = "About Me";
@@ -32,6 +30,7 @@ export default function About() {
                 Contact me anytime at jsmnhou @ gmail; I would love to chat!
               </p>
             </Hero>
+            <AboutSidebar />
           </div>
         </div>
       </div>
