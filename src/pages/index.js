@@ -6,6 +6,7 @@ import Helmet from "react-helmet";
 import { Layout } from "../components/Layout";
 import { SEO } from "../components/SEO";
 import { Heading } from "../components/Heading";
+import { EducationHeading } from "../components/EducationHeading";
 import { Hero } from "../components/Hero";
 import { projectsList } from "../data/projectsList";
 import { contributionsList } from "../data/contributionsList";
@@ -29,8 +30,6 @@ export default function Index() {
                 <br />
                 <br />
                 Thanks for dropping by. 💗
-                {/* Check out my{" "}
-                <Link to="/projects"> projects</Link>! */}
               </p>
             </Hero>
             {/* <div className="decoration">
@@ -44,6 +43,14 @@ export default function Index() {
           </div>
         </div>
 
+        {/* Experience Head */}
+        <div className="container">
+          <section className="segment large">
+            <EducationHeading title="Education" slug="/education" />
+          </section>
+        </div>
+
+          
         {/* Projects Head */}
         <div className="container">
           <section className="segment large">

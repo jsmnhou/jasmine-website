@@ -16,7 +16,13 @@ const mainNavItems = [
   { url: "/projects", label: "Projects" },
 ];
 
-const socialNavItems = [{ url: "https://github.com/jsmnhou", label: "GitHub" }];
+const socialNavItems = [
+  { url: "https://github.com/jsmnhou", label: "GitHub" },
+  {
+    url: "https://docs.google.com/gview?url=https://github.com/jsmnhou/jsmnhou/raw/main/resume.pdf&embedded=true",
+    label: "Resume",
+  },
+];
 
 export const Navigation = ({ theme, onUpdateTheme }) => {
   return (

@@ -24,10 +24,13 @@ export default function About() {
               <p className="hero-description small width">
                 Hey, I'm Jasmine! I grew up in the Bay Area, and I'm currently
                 in my second year as a computer science student at the
-                University of Michigan. (Go Blue!)
+                University of Michigan. <span class="text-michigan-blue">(Go Blue!)</span>
                 <br />
                 <br />
-                Contact me anytime at jsmnhou @ gmail; I would love to chat!
+                Contact me anytime at{" "}
+                <span className="font-bold underline">jsmnhou</span> @{" "}
+                <span className="font-bold underline">gmail</span>; I would love
+                to chat!
               </p>
             </Hero>
             <AboutSidebar />

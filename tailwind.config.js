@@ -5,6 +5,9 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      "michigan-blue": "#3b82f6",
+    },
     extend: {},
   },
   plugins: [],
