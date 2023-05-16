@@ -950,8 +950,8 @@ p.hero-description a:hover {
 
 @media screen and (min-width: 700px) {
   .hero-wrapper {
-    grid-template-columns: 3fr 2fr;
-    gap: 1.5rem;
+    grid-template-columns: 3fr 1.25fr;
+    gap: 2rem;
   }
 
   p.hero-description {
@@ -1180,22 +1180,71 @@ a.post time {
 
 /* Sidebar */
 
+/* .post-sidebar-icons {
+  padding: 1rem 0;
+  font-family: var(--post-font-family);
+} */
+
+.post-sidebar-icons section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-sidebar-icons img {
+  display: inline-block;
+  max-height: 40px;
+  width: auto;
+}
+
+.post-sidebar-icons nav {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0 1rem;
+}
+
+.post-sidebar-icons a,
+.post-sidebar-icons span {
+  display: flex;
+  align-items: center;
+  color: var(--font-color-base);
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 0 0.5rem;
+}
+
+.post-sidebar-icons a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+img.rounded-corners {
+  border-radius: 15px;
+}
+
 .post-sidebar-card {
   border: 1px solid var(--border-color);
   background: var(--card-background-color);
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: var(--border-radius);
-  margin: 1rem 0;
+  margin: 1.5rem 0 auto auto;
 }
+
+/* .post-sidebar-card img {
+  max-width: 100%;
+  max-height: auto;
+} */
 
 .post-sidebar h2 {
   color: var(--font-color-heading);
-  font-size: 0.9rem;
+  font-size: 1.75rem;
   border: none;
-  margin: 0 0 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
+  margin: 1.25rem 0 1rem;
+  /* text-transform: uppercase; */
+  font-weight: 550;
   letter-spacing: 0;
+  text-align: center;
 }
 
 .post-sidebar p,

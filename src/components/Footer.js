@@ -20,7 +20,7 @@ export const Footer = () => {
       <section>
         <nav>
           <span className="desktop-only">Made by Jasmine Hou</span>
-          {links.map((link) => (
+          {/* {links.map((link) => (
             <a
               href={link.url}
               target="_blank"
@@ -29,7 +29,7 @@ export const Footer = () => {
             >
               {link.label}
             </a>
-          ))}
+          ))} */}
         </nav>
         <nav>
           {madeWithLinks.map((link) => (

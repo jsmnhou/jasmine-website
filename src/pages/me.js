@@ -18,10 +18,11 @@ export default function About() {
         <Helmet title={`${title} | ${config.siteTitle}`} />
         <SEO customDescription={description} />
 
+
         <div className="container">
           <div className="hero-wrapper">
             <Hero title="About Me">
-              <p className="hero-description small width">
+              <p className="hero-description">
                 Hey, I'm Jasmine! I grew up in the Bay Area, and I'm currently
                 in my second year as a computer science student at the
                 University of Michigan. <span class="text-michigan-blue">(Go Blue!)</span>
