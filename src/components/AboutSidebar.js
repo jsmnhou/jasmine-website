@@ -1,6 +1,6 @@
 import React from "react";
 import gatsby from "../assets/gatsby.png";
-import github from "../assets/github-octo.webp";
+import github from "../assets/github.png";
 import netlify from "../assets/netlify.png";
 
 import me from "../assets/me.jpeg";
@@ -18,7 +18,7 @@ export const AboutSidebar = () => {
     <aside className="post-sidebar">
       <div className="post-sidebar-card">
         {/* <h2>Me</h2> */}
-        <img className="rounded-corners" src={me} alt="Jasmine" />
+        <img className="rounded-image" src={me} alt="Jasmine" />
         <h2>Jasmine Hou</h2>
         <div className="post-sidebar-icons">
           <section>
@@ -32,7 +32,7 @@ export const AboutSidebar = () => {
                   key={link.url}
                 >
                   {/* <span>{link.label}</span> */}
-                  <img src={link.icon} alt={link.label} />
+                  <img className="post-sidebar-icons" src={link.icon} alt={link.label} />
                 </a>
               ))}
             </nav>

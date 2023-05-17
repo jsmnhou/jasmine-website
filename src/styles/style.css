@@ -1194,13 +1194,13 @@ a.post time {
 
 .post-sidebar-icons img {
   display: inline-block;
-  max-height: 40px;
+  max-height: 35px;
   width: auto;
 }
 
 .post-sidebar-icons nav {
   display: flex;
-  gap: 0.25rem;
+  gap: 0rem;
   margin: 0 1rem;
 }
 
@@ -1219,28 +1219,26 @@ a.post time {
   text-decoration-thickness: 2px;
 }
 
-img.rounded-corners {
+img.rounded-image {
   border-radius: 15px;
+  
 }
 
 .post-sidebar-card {
-  border: 1px solid var(--border-color);
-  background: var(--card-background-color);
-  padding: 1rem;
+  /* border: 1px solid var(--border-color); */
+  /* background: var(--card-background-color); */
+  padding: 3.5rem;
   border-radius: var(--border-radius);
-  margin: 1.5rem 0 auto auto;
+  margin: 1rem 0 auto auto;
+  text-align: center;
 }
 
-/* .post-sidebar-card img {
-  max-width: 100%;
-  max-height: auto;
-} */
 
 .post-sidebar h2 {
   color: var(--font-color-heading);
   font-size: 1.75rem;
   border: none;
-  margin: 1.25rem 0 1rem;
+  margin: 1rem 0 0.5rem;
   /* text-transform: uppercase; */
   font-weight: 550;
   letter-spacing: 0;
